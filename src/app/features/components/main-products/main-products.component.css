@@ -1,0 +1,11 @@
+.big-img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.small-img {
+  height: 50%;
+  width: auto;
+  object-fit: cover;
+}

@@ -1,0 +1,100 @@
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="mb-3">Register Now:</h2>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="bg-white shadow-sm rounded p-4">
+
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name"
+                        [class.is-invalid]="registerForm.get('name')?.invalid && registerForm.get('name')?.touched">
+                    @if (registerForm.get('name')?.errors?.['required'] && registerForm.get('name')?.touched) {
+                    <div class="invalid-feedback">Name is required</div>
+                    }
+                    @if (registerForm.get('name')?.errors?.['minlength']) {
+                    <div class="invalid-feedback">Name must be at least 3 characters</div>
+                    }
+                    @if (registerForm.get('name')?.errors?.['maxlength']) {
+                    <div class="invalid-feedback">Name must be at most 25 characters</div>
+                    }
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" formControlName="email"
+                        [class.is-invalid]="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+                    @if (registerForm.get('email')?.errors?.['required'] && registerForm.get('email')?.touched) {
+                    <div class="invalid-feedback">Email is required</div>
+                    }
+                    @if (registerForm.get('email')?.errors?.['email']) {
+                    <div class="invalid-feedback">Please enter a valid email address</div>
+                    }
+                </div>
+
+                <!-- Password -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password"
+                        [class.is-invalid]="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+                    @if (registerForm.get('password')?.errors?.['required'] && registerForm.get('password')?.touched) {
+                    <div class="invalid-feedback">Password is required</div>
+                    }
+                    @if (registerForm.get('password')?.errors?.['tooShort']) {
+                    <div class="invalid-feedback">Password must be at least 8 characters long</div>
+                    }
+                    @if (registerForm.get('password')?.errors?.['missingUppercase']) {
+                    <div class="invalid-feedback">Password must contain at least one uppercase letter</div>
+                    }
+                    @if (registerForm.get('password')?.errors?.['missingLowercase']) {
+                    <div class="invalid-feedback">Password must contain at least one lowercase letter</div>
+                    }
+                    @if (registerForm.get('password')?.errors?.['missingNumber']) {
+                    <div class="invalid-feedback">Password must contain at least one number</div>
+                    }
+                    @if (registerForm.get('password')?.errors?.['maxlength']) {
+                    <div class="invalid-feedback">Password must be at most 16 characters</div>
+                    }
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="mb-3">
+                    <label for="rePassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="rePassword" formControlName="rePassword"
+                        [class.is-invalid]="registerForm.get('rePassword')?.invalid && registerForm.get('rePassword')?.touched">
+                    @if (registerForm.get('rePassword')?.errors?.['required'] &&
+                    registerForm.get('rePassword')?.touched) {
+                    <div class="invalid-feedback">Password confirmation is required</div>
+                    }
+                    @if (registerForm.get('rePassword')?.errors?.['passwordMismatch']) {
+                    <div class="invalid-feedback">Passwords do not match</div>
+                    }
+                </div>
+
+                <!-- Phone -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" formControlName="phone"
+                        [class.is-invalid]="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched">
+                    @if (registerForm.get('phone')?.errors?.['required'] && registerForm.get('phone')?.touched) {
+                    <div class="invalid-feedback">Phone number is required</div>
+                    }
+                    @if (registerForm.get('phone')?.errors?.['pattern']) {
+                    <div class="invalid-feedback">Please enter a valid phone number</div>
+                    }
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn bg-main text-white ms-auto d-block" [disabled]="registerForm.invalid">
+                    <!-- {{ registerForm.invalid ?  : 'Register' }} -->
+                    @if (registerForm.invalid) {
+                        <i class="fa-solid fa-spinner fa-spin"></i>
+                    } @else {
+                    Register
+                    }
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

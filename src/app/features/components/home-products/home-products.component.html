@@ -1,0 +1,21 @@
+<div class="row g-2 justify-content-center">
+    @for (item of arrOfProducts; track $index) {
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <img [src]=[item.imageCover] class="w-100">
+                <p class="text-main" style="font-size: 14px;">{{item.category.name}}</p>
+                <p style="font-size: 14px;">
+                    {{ item.title.split(' ').slice(0, 2).join(' ') }}
+                </p>
+                <div class="d-flex justify-content-between">
+                    <p style="font-size: 12px;">{{item.price}} EGP</p>
+                    <p style="font-size: 12px;"><i class="fa-solid fa-star rating-color"></i>{{item.ratingsAverage}}
+                    </p>
+                </div>
+                    <button class="btn-custom" (click)="goToProduct(item._id)"> view </button>
+            </div>
+        </div>
+    </div>
+    }
+</div>

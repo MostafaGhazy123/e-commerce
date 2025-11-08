@@ -1,0 +1,16 @@
+.card-img-top {
+  height: 100px;
+  width: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+.owl-nav,
+.owl-nav button,
+.owl-dots {
+  display: none !important;
+  visibility: hidden !important;
+}
+.card-body {
+  background-color: #0aad0a1a!important;
+}

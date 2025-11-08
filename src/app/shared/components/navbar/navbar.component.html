@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" routerLink="/">
+            <img src="freshcart-logo.svg" alt="FreshCart Logo" height="40" class="me-2" />
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left: Nav Links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center text-lg-start">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cart" routerLinkActive="active">Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categories" routerLinkActive="active">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/brands" routerLinkActive="active">Brands</a>
+                </li>
+            </ul>
+
+            <!-- Right: Social + Auth Links -->
+            <div class="d-flex flex-column flex-lg-row align-items-center gap-3">
+                <!-- Social Icons -->
+                <div class="d-flex justify-content-center justify-content-lg-end flex-wrap gap-2">
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram fa-lg"></i>
+                    </a>
+
+                    <a href="https://facebook.com" target="_blank">
+                        <i class="fa-brands fa-facebook fa-lg"></i>
+                    </a>
+
+                    <a href="https://tiktok.com" target="_blank">
+                        <i class="fa-brands fa-tiktok fa-lg"></i>
+                    </a>
+
+                    <a href="https://x.com" target="_blank">
+                        <i class="fa-brands fa-square-x-twitter fa-lg"></i>
+                    </a>
+
+                    <a href="https://linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-lg"></i>
+                    </a>
+
+                    <a href="https://youtube.com" target="_blank">
+                        <i class="fa-brands fa-youtube fa-lg"></i>
+                    </a>
+                </div>
+
+                <!-- Auth Links -->
+                <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-2">
+                    <!-- <a class="nav-link px-2" routerLink="/login">Log-in</a>
+                    <a class="nav-link px-2" routerLink="/register">Register</a>
+                    <a class="nav-link px-2" routerLink="/logout">Logout</a> -->
+                    <!-- Default dropstart button -->
+                    <div class="btn-group dropstart">
+                        <button type="button" class="btn profileBtn" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <a class="nav-link px-2 btn m-3 ddLinks" routerLink="/login">Log-in</a>
+                            <a class="nav-link px-2 btn m-3 ddLinks" routerLink="/register">Register</a>
+                            <a class="nav-link px-2 btn m-3 ddLinks" routerLink="/">Logout</a>
+                            <a class="nav-link px-2 btn m-3 ddLinks" routerLink="/">Profile</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

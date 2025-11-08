@@ -1,0 +1,21 @@
+.custom-btn{
+    background-color: #0aad0a;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: 0.25s ease-in-out;
+}
+.custom-btn:hover{
+    scale: 1.1;
+}
+#carouselExampleIndicators .carousel-control-prev-icon, #carouselExampleIndicators .carousel-control-next-icon {
+  filter: invert(36%) sepia(90%) saturate(5500%) hue-rotate(90deg) brightness(90%) contrast(90%);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+#carouselExampleIndicators .carousel-control-prev-icon:hover, #carouselExampleIndicators .carousel-control-next-icon:hover {
+    scale: 1.1;
+    background-color: transparent !important;
+}

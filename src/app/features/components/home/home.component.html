@@ -1,0 +1,14 @@
+<ngx-spinner bdColor = "rgba(255,255,255,0.9)" size = "large" color = "#0aad0a" type = "ball-clip-rotate-multiple" [fullScreen] = "false"></ngx-spinner>
+
+<section class="container py-5">
+<app-main-products></app-main-products>
+</section>
+<section class="container py-5">
+    <h2 class="my-3">Categories we offer:</h2>
+    <app-carousel (ready)="onCarouselReady()"></app-carousel>
+</section>
+
+<section class="container py-5"> 
+    <h2 class="my-3">Featured products:</h2>
+<app-home-products (ready)="onProductsReady()"></app-home-products>
+</section>

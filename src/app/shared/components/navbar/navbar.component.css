@@ -1,0 +1,29 @@
+.fa-instagram, .fa-facebook, .fa-tiktok,.fa-youtube, .fa-linkedin,.fa-square-x-twitter{
+    transition: ease 0.5s;
+}
+.fa-instagram:hover{
+    color: #FD1D1D;
+    scale: calc(1.2);
+}
+.fa-facebook:hover{
+    color: #1877F2;
+    scale: calc(1.2);
+}
+.fa-youtube:hover{
+    color: #FF0000;
+    scale: calc(1.2);
+}
+.fa-linkedin:hover{
+    color: #0A66C2;
+    scale: calc(1.2);
+}
+.fa-tiktok:hover,.fa-square-x-twitter:hover{
+    scale: calc(1.2);
+}
+.profileBtn,.ddLinks{
+    transition: ease 0.5s;
+}
+.profileBtn:hover,.ddLinks:hover{
+    scale: calc(1.1);
+    color: var(--main-color);
+}
